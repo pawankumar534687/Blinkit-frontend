@@ -39,7 +39,7 @@ const LoginModel = ({ onClose }) => {
       setShowChild(true);
        toast.success("otp send successfully");
     } catch (error) {
-      toast.error("Somthing went wrong")
+      toast.error("Sorry only developer can login")
     }
   };
 const handleBack = () => {
