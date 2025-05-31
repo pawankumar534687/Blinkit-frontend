@@ -16,7 +16,7 @@ const Search = () => {
 
         try {
           const res = await axios.get(
-            `http://localhost:5645/api/products/search?query=${query}`
+            `https://blinkit-backend-oyn1.onrender.com/api/products/search?query=${query}`
           );
           setResults(res.data);
         } catch (error) {

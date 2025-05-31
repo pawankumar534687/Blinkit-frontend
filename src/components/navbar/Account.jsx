@@ -12,7 +12,7 @@ function Account() {
 
   const logout = async () => {
     try {
-      const response = await axios.get("http://localhost:5645/api/logout", {
+      const response = await axios.get("https://blinkit-backend-oyn1.onrender.com/api/logout", {
         withCredentials: true,
       });
 

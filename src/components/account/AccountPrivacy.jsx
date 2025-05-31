@@ -7,7 +7,7 @@ const AccountPrivacy = () => {
   const navigate = useNavigate();
   const deleteAccount = async () => {
     try {
-      const response = await axios.delete("http://localhost:5645/api/user-delete", {
+      const response = await axios.delete("https://blinkit-backend-oyn1.onrender.com/api/user-delete", {
         withCredentials: true,
       });
       toast.success("delete succsessfully")
