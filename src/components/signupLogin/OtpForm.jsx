@@ -17,7 +17,7 @@
 //       const userOTP = data.otp;
 //       const formattedNumber = `+91${phoneNumber}`;
 //       const res = await axios.post(
-//         "http://localhost:5645/api/verifyOtp",
+//         "https://blinkit-backend-oyn1.onrender.com/api/verifyOtp",
 //         {
 //           phone: formattedNumber,
 //           userOTP: userOTP,

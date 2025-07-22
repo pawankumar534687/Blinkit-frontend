@@ -26,7 +26,7 @@ const LoginModel = ({ onClose }) => {
     try {
       const formattedNumber = `+91${data.phone}`;
       const res = await axios.post(
-        "http://localhost:5645/api/loginOrSignup",
+        "https://blinkit-backend-oyn1.onrender.com/api/loginOrSignup",
         {
           phone: formattedNumber,
         },

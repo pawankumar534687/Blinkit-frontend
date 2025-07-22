@@ -14,7 +14,7 @@ const AddAdress = ({ onBack }) => {
       const userId = localStorage.getItem("userId");
       const payload = { ...data, userId };
 
-      await axios.post("http://localhost:5645/api/getaddress", payload, {
+      await axios.post("https://blinkit-backend-oyn1.onrender.com/api/getaddress", payload, {
         headers: {
           "Content-Type": "application/json",
         },

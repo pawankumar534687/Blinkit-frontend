@@ -10,7 +10,7 @@ const AllProducts = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5645/api/allproducts/product"
+        "https://blinkit-backend-oyn1.onrender.com/api/allproducts/product"
       );
 
       setallProducts(response.data);
