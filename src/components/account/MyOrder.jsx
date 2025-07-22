@@ -14,7 +14,7 @@ const MyOrder = () => {
     }
     try {
       const response = await axios.get(
-        `https://blinkit-backend-oyn1.onrender.com/api/allOrders/${userId}`
+        `http://localhost:5645/api/allOrders/${userId}`
       );
       const sortedOrders = response.data.sort(
         (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
@@ -30,7 +30,7 @@ const MyOrder = () => {
   const updateStatus = async (orderId, status) => {
     try {
       const response = await axios.put(
-        `https://blinkit-backend-oyn1.onrender.com/api/orders/${orderId}/status`,
+        `http://localhost:5645/api/orders/${orderId}/status`,
         { status }
       );
 

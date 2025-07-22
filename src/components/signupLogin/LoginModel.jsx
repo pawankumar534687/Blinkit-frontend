@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import OtpForm from "./OtpForm";
+// import OtpForm from "./OtpForm";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 const LoginModel = ({ onClose }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -26,7 +26,7 @@ const LoginModel = ({ onClose }) => {
     try {
       const formattedNumber = `+91${data.phone}`;
       const res = await axios.post(
-        "https://blinkit-backend-oyn1.onrender.com/api/send-otp",
+        "http://localhost:5645/api/loginOrSignup",
         {
           phone: formattedNumber,
         },
@@ -35,30 +35,28 @@ const LoginModel = ({ onClose }) => {
         }
       );
 
-     
-      setShowChild(true);
-       toast.success("otp send successfully");
+      localStorage.setItem("userId", res.data.userId);
+      handleBack()
+      window.location.reload()
+      toast.success("you are logedin successfully");
+    
     } catch (error) {
-      toast.error("Sorry only developer can login")
+      toast.error("Sorry only developer can login");
     }
   };
-const handleBack = () => {
-  if (window.location.pathname === "/") {
-    onClose();
-   
-  } else {
-     navigate(-1);
-   
-  }
-};
-
+  const handleBack = () => {
+    if (window.location.pathname === "/") {
+      onClose();
+    } else {
+      navigate(-1);
+    }
+  };
 
   return (
     <div className="fixed top-0 bottom-0 left-0  right-0 bg-black/50 flex items-center  justify-center z-[9999] ">
       <div className="bg-white w-[40%] max-lg:w-[70%] max-md:w-[80%] max-sm:w-[90%] rounded-3xl p-6 flex justify-center items-center flex-col">
         {!showChild && (
           <>
-          
             <div className="relative w-full h-6 ">
               <button onClick={handleBack}>
                 <img
@@ -109,7 +107,7 @@ const handleBack = () => {
             </form>
           </>
         )}
-        {showChild && <OtpForm phoneNumber={phoneNumber} onClose={onClose} />}
+        {/* {showChild && <OtpForm phoneNumber={phoneNumber} onClose={onClose} />} */}
         <p className="mt-8">
           By continuing, you agree to our Terms of service & Privacy policy
         </p>

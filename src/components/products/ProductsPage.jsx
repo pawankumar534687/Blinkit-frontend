@@ -11,7 +11,7 @@ const ProductsPage = (props) => {
   const getData = async (category) => {
     try {
       const response = await axios.get(
-        `https://blinkit-backend-oyn1.onrender.com/api/products/${category}`
+        `http://localhost:5645/api/products/${category}`
       );
 
       setProducatCategory(response.data);

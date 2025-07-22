@@ -12,14 +12,14 @@ function Account() {
 
   const logout = async () => {
     try {
-      const response = await axios.get("https://blinkit-backend-oyn1.onrender.com/api/logout", {
+      const response = await axios.get("http://localhost:5645/api/logout", {
         withCredentials: true,
       });
 
       setIsLoggedIn({ loggedIn: false, phone: null });
       navigate("/");
-      toast.success("Logout successfully")
       window.location.reload();
+      toast.success("Logout successfully")
     } catch (error) {
       toast.error("Logout failed");
     }

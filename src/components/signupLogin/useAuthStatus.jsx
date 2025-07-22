@@ -8,7 +8,7 @@ const useAuthStatus = () => {
     const checkLogin = async () => {
       try {
         const response = await axios.get(
-          "https://blinkit-backend-oyn1.onrender.com/api/checkLogin",
+          "http://localhost:5645/api/checkLogin",
           {
             withCredentials: true,
           }

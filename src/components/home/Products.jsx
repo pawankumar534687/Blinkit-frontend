@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const Products = () => {
-  
-
   return (
     <div className="lg:mt-6 max-lg:mt-24">
-      <Link >
+      <Link>
         <img
           src="hero-img/android_feed.png"
           className="lg:hidden w-full h-auto p-2 mt-4"
@@ -24,23 +22,23 @@ const Products = () => {
               alt=""
             />
           </Link>
-           <Link to="/products/Dairy, Bread & Eggs">
+          <Link to="/products/Dairy, Bread & Eggs">
             <img className="w-full h-auto" src="products/Slice.png" alt="" />
           </Link>
           <Link to="/products/Fruits & Vegetables">
             <img className="w-full h-auto" src="products/Slice-2.png" alt="" />
           </Link>
-           <Link to="/products/Cold Drinks & Juices">
+          <Link to="/products/Cold Drinks & Juices">
             <img
               className="w-full h-auto"
               src="products/colddrink.png"
               alt=""
             />
           </Link>
-           <Link to="/products/Snacks & Munchies">
+          <Link to="/products/Snacks & Munchies">
             <img className="w-full h-auto" src="products/snacks.png" alt="" />
           </Link>
-           <Link to="/products/Breakfast & Instant Food">
+          <Link to="/products/Breakfast & Instant Food">
             <img
               className="w-full h-auto"
               src="products/breackfast.png"
@@ -54,18 +52,17 @@ const Products = () => {
               alt=""
             />
           </Link>
-             <Link to="/products/Bakery & Biscuits">
+          <Link to="/products/Bakery & Biscuits">
             <img className="w-full h-auto" src="products/beakery.png" alt="" />
           </Link>
-            <Link to="/products/Tea, Coffee & Health Drink">
+          <Link to="/products/Tea, Coffee & Health Drink">
             <img className="w-full h-auto" src="products/tea.png" alt="" />
           </Link>
-         
-            
-          <Link  to="/products/Atta, Rice & Dal">
+
+          <Link to="/products/Atta, Rice & Dal">
             <img className="w-full h-auto" src="products/atta.png" alt="" />
           </Link>
-             <Link to="/products/Masala, Oil & More">
+          <Link to="/products/Masala, Oil & More">
             <img
               className="w-full h-auto"
               src="products/masalaoil.png"
@@ -75,34 +72,27 @@ const Products = () => {
           <Link to="/products/Sauces & Spreads">
             <img className="w-full h-auto" src="products/sauces.png" alt="" />
           </Link>
-          
+
           <Link to="/products/Chicken, Meat & Fish">
             <img className="w-full h-auto" src="products/chicken.png" alt="" />
           </Link>
-          
+
           <Link to="/products/Atta, Rice & Dal">
             <img className="w-full h-auto" src="products/organic.png" alt="" />
           </Link>
-          
+
           <Link to="/products/Baby Care">
             <img className="w-full h-auto" src="products/babycare.png" alt="" />
           </Link>
-       
-        
+
           <Link to="/products/Pharma & Wellness">
             <img className="w-full h-auto" src="products/pharma.png" alt="" />
           </Link>
-          
+
           <Link to="/products/Cleaning Essentials">
             <img className="w-full h-auto" src="products/cleaning.png" alt="" />
           </Link>
-       
-       
-        
-         
-         
-       
-            
+
           <Link to="/products/Home & Office">
             <img
               className="w-full h-auto"
@@ -110,14 +100,14 @@ const Products = () => {
               alt=""
             />
           </Link>
-            <Link to="/products/Atta, Rice & Dal">
+          <Link to="/products/Atta, Rice & Dal">
             <img
               className="w-full h-auto"
               src="products/personalcare.png"
               alt=""
             />
           </Link>
-           <Link to="/products/Pet Care">
+          <Link to="/products/Pet Care">
             <img className="w-full h-auto" src="products/petcare.png" alt="" />
           </Link>
         </div>

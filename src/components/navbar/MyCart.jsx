@@ -11,15 +11,15 @@ const MyCart = ({ onRemove }) => {
     try {
       return JSON.parse(cardString);
     } catch (error) {
-      toast.error("Invalid cart JSON")
-      return {}
+      toast.error("Invalid cart JSON");
+      return {};
     }
   };
 
   const refreshCart = () => {
     const objectData = getData();
     const itemsArray = Object.values(objectData);
-   
+
     setLocalData(itemsArray);
   };
 
@@ -28,7 +28,7 @@ const MyCart = ({ onRemove }) => {
   }, []);
 
   const result = localData.reduce((sum, item) => {
-   const numericPrice = item.price ? parseFloat(item.price.slice(1)) : 0;
+    const numericPrice = item.price ? parseFloat(item.price.slice(1)) : 0;
 
     const quantity = Number(item.quantity) || 0;
     return sum + numericPrice * quantity;
@@ -38,8 +38,8 @@ const MyCart = ({ onRemove }) => {
 
   return (
     <div className="fixed inset-0 bg-black/50 z-[9998] flex justify-end max-lg:justify-center">
-  <div
-   className="
+      <div
+        className="
   bg-gray-100 flex flex-col fixed z-[9999]
   top-0 right-0 bottom-0
   md:left-auto md:w-[45%]        
@@ -48,9 +48,7 @@ const MyCart = ({ onRemove }) => {
   max-md:inset-y-0 max-md:mx-auto max-md:left-0 max-md:right-0 max-md:top-0 max-md:bottom-0
   max-md:w-[90%] max-md:h-[90%] max-md:rounded-xl  
 
-  shadow-lg
-"
-  >
+  shadow-lg">
         <div className=" justify-between     bg-white  top-0 flex  items-center p-4">
           <h2 className="text-lg font-semibold">My Cart</h2>
           <button className=" cursor-pointer font-bold" onClick={onRemove}>

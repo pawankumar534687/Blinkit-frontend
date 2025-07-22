@@ -4,10 +4,7 @@ import useAuthStatus from "./useAuthStatus";
 const ProtectedRoute = ({ children,onLoginRequired  }) => {
   const { isLoggedIn } = useAuthStatus();
 
-
-
-  
-  if (isLoggedIn === null) {
+if (isLoggedIn === null) {
     return <div>Loading...</div>;
   }
 

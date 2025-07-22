@@ -13,7 +13,7 @@ const SavedAddresses = ({ onAddressSelect }) => {
     const getAddress = async () => {
        const userId = localStorage.getItem("userId")
       try {
-        const respose = await axios.get(`https://blinkit-backend-oyn1.onrender.com/api/alladdress/${userId}`);
+        const respose = await axios.get(`http://localhost:5645/api/alladdress/${userId}`);
         const resulte = respose.data;
         setAddress(resulte);
       } catch (error) {

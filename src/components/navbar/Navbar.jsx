@@ -87,7 +87,7 @@ const Navbar = ({ onClickShow, onClickBill }) => {
                 src="/hero-img/user.png"
                 className="lg:hidden w-6 h-6 cursor-pointer"
                 alt=""
-              />{" "}
+              />
             </button>
           )}
         </div>

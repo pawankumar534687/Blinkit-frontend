@@ -81,7 +81,7 @@ const Payment = () => {
       }
 
       const response = await axios.post(
-        "https://blinkit-backend-oyn1.onrender.com/api/order",
+        "http://localhost:5645/api/order",
         alldata,
         {
           headers: {

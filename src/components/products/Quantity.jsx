@@ -39,7 +39,7 @@ const Quantity = ({ product, onQuantityChange, readOnly = false }) => {
     const newQty = quantity - 1;
     setQuantity(newQty);
     updateCart({ ...product, quantity: newQty });
-  };
+  }; 
 
   const handleAdd = () => {
 
