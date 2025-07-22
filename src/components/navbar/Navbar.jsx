@@ -40,7 +40,10 @@ const Navbar = ({ onClickShow, onClickBill }) => {
 
   return (
     <div className="lg:flex fixed top-0 max-lg:justify-center  left-0 w-full bg-white shadow z-50 lg:justify-between lg:items-center gap-6 lg:h-24    lg:border-b  lg:border-b-neutral-200">
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
+    
 
       <div className="flex lg:justify-between items-center max-lg:justify-around lg:w-[70%]   m-4">
         <button className="lg:hidden" onClick={() => navigate(-1)}>
