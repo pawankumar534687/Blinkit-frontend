@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 const Accounts = () => {
   const navigate = useNavigate();
   const { isLoggedIn, setIsLoggedIn } = useAuthStatus();
-  if (isLoggedIn === null) return <p>Loading...</p>;
+  if (isLoggedIn === null) return <p>Website may load slowly due to free hosting...</p>;
 
   const logout = async () => {
     try {

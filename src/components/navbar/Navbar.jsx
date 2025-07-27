@@ -30,7 +30,7 @@ const Navbar = ({ onClickShow, onClickBill }) => {
     }
   }, []);
 
-  if (isLoggedIn === null) return <p>Loading...</p>;
+  if (isLoggedIn === null) return <p>Website may load slowly due to free hosting...</p>;
 
   const filler = first.map((item) => ({
     quantity: Number(item.quantity),
